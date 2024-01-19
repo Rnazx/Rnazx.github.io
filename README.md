@@ -1,2 +1,3 @@
 # Welcome to Rion's website
-# commmenonidbjkf
+## This place is used by him to write random stuff about his life
+### Creating a website is funnn!!!
