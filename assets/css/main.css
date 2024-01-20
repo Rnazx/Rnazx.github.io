@@ -1656,6 +1656,7 @@
 		margin: 0 0 2em 0;
 	}
 
+
 	h1, h2, h3, h4, h5, h6 {
 		/* color: #5385c1; */
 		color: #5a3348;
@@ -1704,7 +1705,8 @@
 
 	blockquote {
 		border-left: solid 4px #dbdbdb;
-		font-style: italic;
+		text-align: left;
+		/* font-style: italic; */
 		margin: 0 0 2em 0;
 		padding: 0.5em 0 0.5em 2em;
 	}
@@ -2305,11 +2307,12 @@
 		border-radius: 50%;
 		border: 0;
 		display: inline-block;
-		position: relative;
+		position: left;
 	}
 		.pfpimage img {
 			border-radius: 50%;
 			display: block;
+			width: 300px;
 			max-width: 85%;
   			height: auto;
 		}
