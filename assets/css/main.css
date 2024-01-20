@@ -2310,6 +2310,8 @@
 		.pfpimage img {
 			border-radius: 50%;
 			display: block;
+			max-width: 85%;
+  			height: auto;
 		}
 
 /* List */
