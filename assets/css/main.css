@@ -1908,6 +1908,7 @@
 
 		.flex.flex-2 article {
 			width: 47%;
+			margin-bottom: 1cm;
 		}
 
 		.flex.flex-3 article {
@@ -2312,9 +2313,9 @@
 		.pfpimage img {
 			border-radius: 50%;
 			display: block;
-			width: 300px;
-			max-width: 85%;
-  			height: auto;
+			width: auto;
+			/* max-width: 85%; */
+  			height: 350px;
 		}
 
 /* List */

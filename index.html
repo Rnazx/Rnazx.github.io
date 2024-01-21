@@ -18,11 +18,12 @@
 				<div class="inner">
 					<a href="index.html" class="logo">Home</a>
 					<nav id="nav">
-						<a href="#two">About Me</a>
-						<a href="#three">Projects</a>
+						<a href="#about">About Me</a>
+						<a href="#project">Projects</a>
 						<a href="misc/cv_rion.pdf">CV</a>
 						<a href="blog.html">Blog</a>
-						<a href="elements.html">Contact</a>
+						<a href="#contact">Contact</a>
+						<!-- <a href="elements.html">element</a> -->
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -69,7 +70,8 @@
 			</section> -->
 
 		<!-- Two -->
-			<section id="two" class="wrapper style1 special">
+			<section id="about" class="wrapper style1 special">
+				
 				<div class="inner">
 					<header>
 						<h2>About Me</h2>
@@ -78,7 +80,21 @@
 						<!-- <div class="6u$ 12u$(small)">-->
 						<div class="6u 12u$(medium)">
 							<div class="pfpimage">
-								<img src="images/rion_alt3.jpg" alt="Person 1" />
+								<img id = "image" src="images/rion_alt4.jpg" alt="Person 1" />
+								<script>
+
+									var imageSources = ["images/rion_alt2.jpg", "images/rion_alt3.jpg","images/rion_alt4.jpg"]
+									
+									var index = 0;
+									setInterval (function(){
+									  if (index === imageSources.length) {
+										index = 0;
+									  }
+									  document.getElementById("image").src = imageSources[index];
+									  index++;
+									} , 5000);
+									
+								</script>
 							</div>
 						</div>
 						<div class="6u$ 12u$(medium)">
@@ -91,26 +107,58 @@
 			</section>
 
 		<!-- Three -->
-			<section id="three" class="wrapper special">
+			<section id="project" class="wrapper special">
 				<div class="inner">
 					<header class="align-center">
 						<h2>Projects</h2>
-						<p>Some of my research projects </p>
+						<p>Some of my research interests </p>
 					</header>
 					<div class="flex flex-2">
 						<article>
 							<div class="image fit">
-								<img src="images/pic01.jpg" alt="Pic 01" />
+								<img src="images/galmag.jpg" width = 300 height = 200 alt="galactic magnetic fields" title="The magnetic field in the Whirlpool Galaxy (M51), captured by NASA's flying Stratospheric Observatory for Infrared Astronomy (SOFIA) observatory superimposed on a Hubble telescope picture of the galaxy. The image shows infrared images of grains of dust in the M51 galaxy. Their magnetic orientation largely follows the spiral shape of the galaxy, but it is also being pulled in the direction of the neighboring galaxy at the right of the frame. (Credit: NASA, SOFIA, HAWC+, Alejandro S. Borlaff; JPL-Caltech, ESA, Hubble)">
+								<!-- <img src="images/pic01.jpg" alt="Pic 01" /> -->
 							</div>
 							<header>
-								<h3>Praesent placerat magna</h3>
+								<h3>Galactic Magnetic Fields</h3>
 							</header>
-							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+							<p>
+								<b>• Scaling relations finder <a href = "https://arxiv.org/abs/2311.15612">[arXiv]</a><a href = "https://github.com/Rnazx/Scaling-Relations">[Github]</a></b>
+								<br>
+									— The code solves for the magnetic field resulting in a closed‑form analytical solution. This is used to calculate the relevant
+									scaling relations.
+								<br>
+								<b>• Semi‑analytical model applied to nearby galaxies <a href = "https://github.com/Rnazx/goblin">[Github]</a></b>
+								<br>
+								— The validity of the model is confirmed by comparing the semi‑analytical solutions, with the observed magnetic field of the
+								galaxies in our local group.
+								</p>
 							<footer>
-								<a href="#" class="button special">More</a>
+								<a href="https://github.com/Rnazx/goblin" class="button special">Github</a>
 							</footer>
 						</article>
 						<article>
+							<div class="image fit">
+								<img src="images/europa_banner.jpeg" width = 300 height = 200 title="The puzzling, fascinating surface of Jupiter's icy moon Europa looms large in this reprocessed color view, made from images taken by NASA's Galileo spacecraft in the late 1990s. Credit: NASA/JPL-Caltech/SETI Institute" 
+								alt="europa" />
+							</div>
+							<header>
+								<h3>Lineaments on the Surface of Europa</h3>
+							</header>
+							<p>
+								• Three different models were trained using a data set created using different annotating techniques.
+								<br>
+								• A novel model was proposed which combined two different techniques in Machine learning (CNNs and random forests).
+								<br>
+								• This work was presented in Lunar and Planetary Science Conference (LPSC) and the Indian Planetary Science Conference
+								(IPSC).
+							</p>
+							<footer>
+								<a href="https://emb1ues.github.io/21cs460_group17/" class="button special">More</a>
+							</footer>
+						</article>
+					
+						<!-- <article>
 							<div class="image fit">
 								<img src="images/pic02.jpg" alt="Pic 02" />
 							</div>
@@ -121,17 +169,106 @@
 							<footer>
 								<a href="#" class="button special">More</a>
 							</footer>
-						</article>
+						</article> -->
 					</div>
 				</div>
 			</section>
+			<hr />
+				<!-- Four -->
+				<section id="contact" class="wrapper special">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Contact Me</h2>
+						</header>
+								<form onsubmit="sendEmail('Message from your website','riong.nazareth@niser.ac.in')">
+									<div class="row uniform">
+										<div class="6u 12u$(xsmall)">
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<input type="email" name="email" id="email" value="" placeholder="Email" />
+										</div>
+										<!-- Break -->
+										<div class="12u$">
+											<div class="select-wrapper">
+												<select name="category" id="category">
+													<option value="">- Category -</option>
+													<option value="1">Professional</option>
+													<option value="1">Personal</option>
+												</select>
+											</div>
+										</div>
+										<!-- Break -->
+										<div class="4u 12u$(small)">
+											<input type="radio" id="priority-low" name="priority" checked>
+											<label for="priority-low">Low Priority</label>
+										</div>
+										<div class="4u 12u$(small)">
+											<input type="radio" id="priority-normal" name="priority">
+											<label for="priority-normal">Normal Priority</label>
+										</div>
+										<div class="4u$ 12u$(small)">
+											<input type="radio" id="priority-high" name="priority">
+											<label for="priority-high">High Priority</label>
+										</div>
+										<!-- Break -->
+										<div class="6u 12u$(small)">
+											<input type="checkbox" id="copy" name="copy">
+											<label for="copy">Email me a copy of this message</label>
+										</div>
+										<div class="6u$ 12u$(small)">
+											<input type="checkbox" id="human" name="human" checked>
+											<label for="human">I am a human and not a robot</label>
+										</div>
+										<!-- Break -->
+										<div class="12u$">
+											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<!-- Break -->
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" /></li>
+												<li><input type="reset" value="Reset" class="alt" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+								<script>
+									// if (document.getElementById("copy").value == true){
+									// 	sendEmail("Copy of your message...",document.getElementById("email").value)
+									// }
+
+								</script>
+								<script> src="https://smtpjs.com/v3/smtp.js"</script>
+								<script>
+									function sendEmail(sub, toemail){
+										Email.send({
+										Host : "smtp.elasticemail.com",
+										Username : "rionazareth@gmail.com",
+										Password : "AFCC06C447749A5AC7C6715688A94256A0F4",
+										To : toemail,
+										From : document.getElementById("email").value,
+										Subject : sub,
+										Body : "Name: "+document.getElementById("name").value
+												+"<br> Email: "+document.getElementById("email").value
+												+"<br> Priority: "+document.getElementsByName("priority").value
+												+"<br> Message: "+document.getElementById("message").value
+										
+}).then(
+  message => alert("Message sent succesfully")
+);
+}
+								</script>
+						</div>
+					</div>
+				</section>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
 					<div class="flex">
 						<div class="copyright">
-							&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.
+							&copy; Rion Glenn Nazareth | Design: <a href="https://templated.co">TEMPLATED</a>.
 						</div>
 						<ul class="icons">
 							<li><a href="mailto: rionglennnazareth@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
