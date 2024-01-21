@@ -180,7 +180,7 @@
 						<header class="align-center">
 							<h2>Contact Me</h2>
 						</header>
-								<form onsubmit="sendEmail('Message from your website','riong.nazareth@niser.ac.in')">
+								<form onsubmit="sendEmail() ; reset(); return false">
 									<div class="row uniform">
 										<div class="6u 12u$(xsmall)">
 											<input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -233,34 +233,34 @@
 										</div>
 									</div>
 								</form>
-								<script>
-									// if (document.getElementById("copy").value == true){
-									// 	sendEmail("Copy of your message...",document.getElementById("email").value)
-									// }
-
-								</script>
-								<script> src="https://smtpjs.com/v3/smtp.js"</script>
-								<script>
-									function sendEmail(sub, toemail){
-										Email.send({
-										Host : "smtp.elasticemail.com",
-										Username : "rionazareth@gmail.com",
-										Password : "AFCC06C447749A5AC7C6715688A94256A0F4",
-										To : toemail,
-										From : document.getElementById("email").value,
-										Subject : sub,
-										Body : "Name: "+document.getElementById("name").value
-												+"<br> Email: "+document.getElementById("email").value
-												+"<br> Priority: "+document.getElementsByName("priority").value
-												+"<br> Message: "+document.getElementById("message").value
-										
-}).then(
-  message => alert("Message sent succesfully")
-);
-}
-								</script>
+								
 						</div>
 					</div>
+					<!-- <script>
+						if (document.getElementById("copy").value == true){
+							sendEmail("Copy of your message...",document.getElementById("email").value)
+						}
+					</script> -->
+					<script> src="https://smtpjs.com/v3/smtp.js"</script>
+					<script>
+						function sendEmail(){
+							Email.send({
+							Host : "smtp.elasticemail.com",
+							Username : "rionazareth@gmail.com",
+							Password : "AFCC06C447749A5AC7C6715688A94256A0F4",
+							To : 'riong.nazareth@niser.ac.in',
+							From : document.getElementById("email").value,
+							Subject : 'Message from your website',
+							Body : "Name: "+document.getElementById("name").value
+									+"<br> Email: "+document.getElementById("email").value
+									// +"<br> Priority: "+document.getElementsByName("priority").value
+									+"<br> Message: "+document.getElementById("message").value
+							
+}).then(
+message => alert("Message sent succesfully")
+);
+}
+					</script>
 				</section>
 
 		<!-- Footer -->
