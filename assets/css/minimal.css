@@ -764,6 +764,46 @@ a:hover:not(.button) {
     border-left: 1px solid #000000 !important;
     width: 80% !important;
     max-width: 300px !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    height: 100% !important;
+    z-index: 10002 !important;
+    overflow-y: auto !important;
+    padding-top: 4rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    visibility: hidden !important;
+    -moz-transform: translateX(100%) !important;
+    -webkit-transform: translateX(100%) !important;
+    -ms-transform: translateX(100%) !important;
+    transform: translateX(100%) !important;
+    -moz-transition: -moz-transform 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+    -ms-transition: -ms-transform 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+    transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+}
+
+@media (max-width: 768px) {
+    #navPanel {
+        padding-top: 3.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #navPanel {
+        padding-top: 3rem !important;
+    }
+}
+
+#navPanel.visible {
+    visibility: visible !important;
+    -moz-transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    -ms-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+    box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2) !important;
 }
 
 #navPanel a {
@@ -772,9 +812,31 @@ a:hover:not(.button) {
     padding: 1rem !important;
     display: block !important;
     text-align: left !important;
+    text-decoration: none !important;
 }
 
 #navPanel a:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+#navPanel .close {
+    position: absolute !important;
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border: none !important;
+    background: transparent !important;
+    font-size: 1.5rem !important;
+    line-height: 2.5rem !important;
+    text-align: center !important;
+    color: #000000 !important;
+    cursor: pointer !important;
+    z-index: 10003 !important;
+}
+
+#navPanel .close:hover {
     background: #000000 !important;
     color: #ffffff !important;
 }
@@ -789,8 +851,23 @@ a:hover:not(.button) {
         display: inline-block !important;
         flex-shrink: 0 !important; /* Prevent button from shrinking */
         margin-left: auto !important; /* Push to right */
-        padding: 0.5rem !important;
+        padding: 0.5rem 1rem !important;
         z-index: 10001 !important;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+        position: relative !important;
+        -webkit-tap-highlight-color: transparent !important;
+    }
+    
+    .navPanelToggle span {
+        display: block !important;
+        font-size: 1.2rem !important;
+        pointer-events: none !important;
+    }
+    
+    .navPanelToggle:hover {
+        background: #000000 !important;
+        color: #ffffff !important;
     }
     
     #nav {
