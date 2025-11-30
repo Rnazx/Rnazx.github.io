@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#000000"/>
+  
+  <!-- Spiral galaxy arms -->
+  <path d="M 32 2 Q 20 10 15 20 Q 10 30 12 40 Q 14 50 20 55 Q 26 60 32 62" 
+        stroke="#ffffff" 
+        stroke-width="1.5" 
+        fill="none" 
+        opacity="0.9"/>
+  <path d="M 32 2 Q 44 10 49 20 Q 54 30 52 40 Q 50 50 44 55 Q 38 60 32 62" 
+        stroke="#ffffff" 
+        stroke-width="1.5" 
+        fill="none" 
+        opacity="0.9"/>
+  
+  <!-- Inner spiral -->
+  <path d="M 32 10 Q 25 15 22 22 Q 19 29 21 35 Q 23 41 28 45 Q 33 49 32 54" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.7"/>
+  <path d="M 32 10 Q 39 15 42 22 Q 45 29 43 35 Q 41 41 36 45 Q 31 49 32 54" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        fill="none" 
+        opacity="0.7"/>
+  
+  <!-- Central bulge (bright core) -->
+  <circle cx="32" cy="32" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="32" cy="32" r="2" fill="#ffffff"/>
+  
+  <!-- Stars scattered around -->
+  <circle cx="10" cy="15" r="1" fill="#ffffff"/>
+  <circle cx="54" cy="20" r="1" fill="#ffffff"/>
+  <circle cx="18" cy="50" r="1" fill="#ffffff"/>
+  <circle cx="48" cy="48" r="1" fill="#ffffff"/>
+  <circle cx="25" cy="8" r="0.8" fill="#ffffff"/>
+  <circle cx="42" cy="12" r="0.8" fill="#ffffff"/>
+</svg>
+
