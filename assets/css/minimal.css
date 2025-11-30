@@ -89,6 +89,8 @@ p {
     color: #000000;
     text-decoration: none;
     letter-spacing: -0.02em;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    margin-right: auto; /* Push to left */
 }
 
 #header a {
@@ -625,8 +627,18 @@ a:hover:not(.button) {
         font-size: 1.5rem;
     }
     
+    .pfpimage {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important; /* Center the image */
+    }
+    
     .pfpimage img {
-        max-width: 250px;
+        max-width: 100% !important;
+    }
+    
+    #about .row {
+        padding: 0 1rem !important; /* Add padding to prevent cutoff */
     }
     
     #footer .inner {
@@ -686,8 +698,22 @@ a:hover:not(.button) {
         font-size: 1rem;
     }
     
+    .pfpimage {
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 auto !important; /* Center the image */
+    }
+    
     .pfpimage img {
-        max-width: 200px;
+        max-width: 100% !important;
+    }
+    
+    #about .row {
+        padding: 0 0.5rem !important; /* Add padding to prevent cutoff */
+    }
+    
+    #about .inner {
+        padding: 0 0.5rem !important;
     }
     
     article {
@@ -761,10 +787,23 @@ a:hover:not(.button) {
 @media (max-width: 768px) {
     .navPanelToggle {
         display: inline-block !important;
+        flex-shrink: 0 !important; /* Prevent button from shrinking */
+        margin-left: auto !important; /* Push to right */
+        padding: 0.5rem !important;
+        z-index: 10001 !important;
     }
     
     #nav {
         display: none !important;
+    }
+    
+    #header .inner {
+        justify-content: space-between !important;
+        gap: 1rem !important;
+    }
+    
+    #header .logo {
+        margin-right: 0 !important; /* Reset margin on mobile */
     }
 }
 
